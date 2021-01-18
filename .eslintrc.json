@@ -1,0 +1,40 @@
+{
+  "extends": ["eslint-config-airbnb", "plugin:sonarjs/recommended"],
+  "plugins": ["sonarjs"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "rules": {
+    "react/jsx-curly-spacing": [2, { "when": "always" }],
+    "no-console": ["error", { "allow": ["info", "warn", "error"] }],
+    "react/destructuring-assignment": [2, "always", { "ignoreClassFields": true }],
+    "arrow-parens": ["error", "as-needed"],
+    "comma-dangle": ["error", "never"],
+    "template-curly-spacing": ["error", "always"],
+    "import/extensions": ["error", "never"],
+    "max-len": [2, { "code": 140, "ignoreUrls": true, "ignoreStrings": true, "ignoreRegExpLiterals": true }],
+    "react/static-property-placement": ["error", "static public field"],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "react/state-in-constructor": "off",
+    "no-underscore-dangle": "off",
+    "camelcase": "off",
+    "import/no-unresolved": "off",
+    "func-names": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "no-mixed-operators": "off",
+    "react/no-array-index-key": "off",
+    "import/prefer-default-export": "off",
+    "sonarjs/no-duplicate-string": "off",
+    "sonarjs/no-small-switch": "off"
+  }
+}

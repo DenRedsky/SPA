@@ -1,15 +1,5 @@
 # Webpack 4, react, redux, saga, router, stylus template
 
-Don't forget change next meta tags value, cuz it's just example.
-```js
-<title>Web-application</title>
-<meta name="description" content="Web-application boilerplate without state-managers and middlewares">
-<meta property="og:title" content="Web-application" />
-<meta property="og:description" content="Web-application boilerplate without state-managers and middlewares" />
-<meta property="og:locale" content="ru_RU" />
-<meta property="og:image" content="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" />
-<link rel="canonical" href="https://www.google.com" />
-```
 Example of font loading (not google fonts):
 
 **1) html**

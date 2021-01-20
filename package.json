@@ -75,7 +75,7 @@
     "webpack-dev-server": "3.11.0"
   },
   "scripts": {
-    "prod": "npm run lint && BABEL_ENV=production webpack --env=prod",
+    "build": "npm run lint && BABEL_ENV=production webpack --env=prod",
     "start": "webpack-dev-server --env=dev",
     "analyze": "webpack --env=analyze",
     "lint:style": "stylint src/",

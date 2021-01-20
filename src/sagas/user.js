@@ -3,10 +3,12 @@ import axios from 'axios';
 import { getUsers } from 'api';
 
 function* fetchUser() {
-  const { value } = yield axios(getUsers).then(({ data }) => {
-    console.log(data);
-    debugger;
-  });
+  const value = yield axios(getUsers)
+    .then(({ data }) => {
+      const user = data[0];
+
+      return { name: user.name, email: user.email };
+    });
 
   yield put({ type: 'USER/SET_USER', value });
 }

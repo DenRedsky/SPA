@@ -1,11 +1,11 @@
 const initial = {
-  posts: []
+  items: []
 };
 
 export default (state = initial, { type, value }) => {
   switch (type) {
     case 'POSTS/SET_POSTS':
-      return { ...state, posts: value };
+      return { ...state, items: value };
     default:
       return state;
   }

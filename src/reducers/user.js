@@ -5,7 +5,7 @@ const initial = {
 
 export default (state = initial, { type, value }) => {
   switch (type) {
-    case 'USERS/SET_USER':
+    case 'USER/SET_USER':
       return { ...state, ...value };
     default:
       return state;

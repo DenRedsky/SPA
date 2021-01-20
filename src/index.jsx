@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
-import { RouterProvider, Route } from 'react-router5';
+import { RouterProvider, useRoute } from 'react-router5';
 import { polyfills } from 'services';
 
 import store from './store';
@@ -15,13 +15,14 @@ import './globalStyles';
 
 polyfills();
 
-function App({ route }) {
-  switch (route.name) {
-    case PAGES.ABOUT:
-      return <About />;
-    default:
-      return <Main />;
+function App() {
+  const { route } = useRoute();
+
+  if (route.name === PAGES.ABOUT) {
+    return <About />;
   }
+
+  return <Main />;
 }
 
 App.propTypes = {
@@ -38,7 +39,7 @@ App.propTypes = {
 ReactDOM.render(
   <Provider store={ store }>
     <RouterProvider router={ router }>
-      <Route>{({ route }) => <App route={ route } />}</Route>
+      <App />
     </RouterProvider>
   </Provider>,
   document.getElementById('app')

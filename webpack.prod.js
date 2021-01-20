@@ -10,7 +10,9 @@ const { seo } = require('./package.json');
 
 module.exports = {
   mode: 'production',
-  entry: path.resolve('src', 'index.jsx'),
+  entry: {
+    app: path.resolve('src', 'index.jsx')
+  },
   output: {
     filename: 'js/[name].[contenthash].js',
     path: path.resolve('dist')
@@ -18,8 +20,8 @@ module.exports = {
   resolve: {
     alias: {
       'services': path.resolve('src', 'services'),
-      'constants': path.resolve('src', 'constants.styl'),
-      'jsConstants': path.resolve('src', 'constants.js'),
+      'styles': path.resolve('src', 'constants.styl'),
+      'constants': path.resolve('src', 'constants.js'),
       'api': path.resolve('src', 'api.js'),
       'router': path.resolve('src', 'router.js')
     },

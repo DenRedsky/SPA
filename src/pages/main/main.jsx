@@ -57,7 +57,7 @@ class Main extends React.Component {
         <div>
           Email: { user.email }.
         </div>
-        <h1>
+        <h1 className={ styles.art }>
           Posts
         </h1>
 

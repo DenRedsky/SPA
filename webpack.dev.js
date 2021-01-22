@@ -100,7 +100,7 @@ module.exports = {
         include: /src/
       },
       {
-        test: /\.(png|jpg|svg)$/,
+        test: /\.(png|jpg)$/,
         use: 'file-loader',
         include: /src/
       }

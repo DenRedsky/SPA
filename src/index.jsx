@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { RouterProvider, useRoute } from 'react-router5';
 import { polyfills } from 'services';
@@ -25,17 +24,6 @@ function App() {
   return <Main />;
 }
 
-App.propTypes = {
-
-  /** Инстанс роута */
-  route: PropTypes.shape({
-
-    /** Название роута */
-    name: PropTypes.string.isRequired
-
-  }).isRequired
-};
-
 ReactDOM.render(
   <Provider store={ store }>
     <RouterProvider router={ router }>
@@ -44,3 +32,7 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('app')
 );
+
+if (process.env.NODE_ENV !== 'production') {
+  module?.hot?.accept();
+}

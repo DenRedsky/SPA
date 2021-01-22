@@ -4,7 +4,8 @@
   "seo": {
     "title": "This is title",
     "keywords": "word1, word2, word3",
-    "description": "This is description"
+    "description": "This is description",
+    "url": "https://nameofyoursite.com"
   },
   "repository": {
     "type": "git",

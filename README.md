@@ -1,6 +1,6 @@
 # Webpack 4, react, redux, saga, router, stylus template
 
-Example of font loading (not google fonts):
+Example of font loading:
 
 **1) html**
 

@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
-const webpack = require('webpack');
 const { seo } = require('./package.json');
 
 const stats = {
@@ -24,10 +23,6 @@ module.exports = {
   entry: {
     app: path.resolve('src', 'index.jsx')
   },
-  output: {
-    filename: '[name].js',
-    path: path.resolve('dist')
-  },
   resolve: {
     alias: {
       'services': path.resolve('src', 'services'),
@@ -39,35 +34,30 @@ module.exports = {
     modules: ['node_modules'],
     extensions: ['.jsx', '.js', '.styl', '.svg']
   },
-  devtool: 'source-map',
+  devtool: 'eval-cheap-module-source-map',
   devServer: {
-    contentBase: path.resolve('dist'),
     historyApiFallback: true,
     stats,
     port: 3000,
-    hot: true,
-    watchOptions: {
-      poll: true
-    }
+    hot: true
   },
-  stats,
   module: {
     rules: [
       {
         test: /\.(js|jsx)/,
         enforce: 'pre',
         loader: 'eslint-loader',
-        exclude: /node_modules/
+        include: /src/
       },
       {
         test: /\.hbs$/,
         loader: 'handlebars-loader',
-        exclude: /node_modules/
+        include: /src/
       },
       {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader?cacheDirectory',
-        exclude: /node_modules/
+        include: /src/
       },
       {
         test: /\.styl$/,
@@ -94,7 +84,7 @@ module.exports = {
             }
           }
         ],
-        exclude: /node_modules/
+        include: /src/
       },
       {
         test: /\.svg$/,
@@ -107,12 +97,12 @@ module.exports = {
             }
           }
         ],
-        exclude: /node_modules/
+        include: /src/
       },
       {
         test: /\.(png|jpg|svg)$/,
         use: 'file-loader',
-        exclude: /node_modules/
+        include: /src/
       }
     ]
   },
@@ -122,7 +112,6 @@ module.exports = {
       filename: 'index.html',
       template: path.resolve('src', 'template.hbs'),
       seo
-    }),
-    new webpack.HotModuleReplacementPlugin()
+    })
   ]
 };

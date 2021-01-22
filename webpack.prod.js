@@ -14,8 +14,7 @@ module.exports = {
     app: path.resolve('src', 'index.jsx')
   },
   output: {
-    filename: 'js/[name].[contenthash].js',
-    path: path.resolve('dist')
+    filename: 'js/[name].[contenthash].js'
   },
   resolve: {
     alias: {
@@ -42,20 +41,17 @@ module.exports = {
     warnings: true,
     children: false
   },
-  performance: {
-    hints: false
-  },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
-        exclude: /node_modules/
+        include: /src/
       },
       {
         test: /\.hbs$/,
         loader: 'handlebars-loader',
-        exclude: /node_modules/
+        include: /src/
       },
       {
         test: /\.styl$/,
@@ -82,7 +78,7 @@ module.exports = {
           },
           'stylus-loader'
         ],
-        exclude: /node_modules/
+        include: /src/
       },
       {
         test: /\.svg$/,
@@ -95,11 +91,12 @@ module.exports = {
             }
           }
         ],
-        exclude: /node_modules/
+        include: /src/
       },
       {
-        test: /\.(png|jpg|svg)$/,
-        use: 'file-loader'
+        test: /\.(png|jpg)$/,
+        use: 'file-loader',
+        include: /src/
       }
     ]
   },

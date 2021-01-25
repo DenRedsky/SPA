@@ -1,10 +1,7 @@
 module.exports = {
   presets: [
     '@babel/preset-react',
-    ['@babel/preset-env', {
-      modules: false,
-      loose: true
-    }]
+    ['@babel/preset-env', { loose: true }]
   ],
   plugins: [
     '@babel/plugin-transform-runtime',

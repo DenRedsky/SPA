@@ -113,6 +113,7 @@ module.exports = {
       filename: 'index.html',
       template: path.resolve('src', 'template.hbs'),
       seo,
+      scriptLoading: 'defer',
       minify: true
     }),
     new MiniCss({ filename: 'css/[name].[contenthash].css', ignoreOrder: true }),

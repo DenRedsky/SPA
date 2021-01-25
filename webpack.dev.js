@@ -111,6 +111,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve('src', 'template.hbs'),
+      scriptLoading: 'defer',
       seo
     })
   ]

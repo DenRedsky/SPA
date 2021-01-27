@@ -2,7 +2,6 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const autoprefixer = require('autoprefixer');
 const CheckDuplicatePlugin = require('duplicate-package-checker-webpack-plugin');
 const { UnusedFilesWebpackPlugin } = require('unused-files-webpack-plugin');
 const MiniCss = require('mini-css-extract-plugin');
@@ -71,12 +70,7 @@ module.exports = {
               }
             }
           },
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: () => [autoprefixer()]
-            }
-          },
+          'postcss-loader',
           'stylus-loader'
         ],
         include: /src/

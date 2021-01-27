@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const autoprefixer = require('autoprefixer');
 const { seo } = require('./package.json');
 
 const stats = {
@@ -71,12 +70,7 @@ module.exports = {
               }
             }
           },
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: () => [autoprefixer()]
-            }
-          },
+          'postcss-loader',
           {
             loader: 'stylus-loader',
             options: {

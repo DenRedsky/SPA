@@ -25,7 +25,7 @@ module.exports = {
       'router': path.resolve('src', 'router.js')
     },
     modules: ['node_modules'],
-    extensions: ['.jsx', '.js', '.styl', '.svg']
+    extensions: ['.jsx', '.js', '.styl']
   },
   devtool: false,
   stats: {

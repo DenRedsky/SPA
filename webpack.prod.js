@@ -6,6 +6,7 @@ const autoprefixer = require('autoprefixer');
 const CheckDuplicatePlugin = require('duplicate-package-checker-webpack-plugin');
 const { UnusedFilesWebpackPlugin } = require('unused-files-webpack-plugin');
 const MiniCss = require('mini-css-extract-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 const { seo } = require('./package.json');
 
 module.exports = {
@@ -116,6 +117,11 @@ module.exports = {
       scriptLoading: 'defer',
       minify: true
     }),
+    new HtmlWebpackPlugin({
+      filename: 'offline.html',
+      template: path.resolve('src', 'offline.html'),
+      minify: true
+    }),
     new MiniCss({ filename: 'css/[name].[contenthash].css', ignoreOrder: true }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/,
@@ -123,6 +129,9 @@ module.exports = {
         zindex: false,
         discardComments: { removeAll: true }
       }
+    }),
+    new WorkboxPlugin.InjectManifest({
+      swSrc: path.resolve('src', 'pwa', 'service-worker.js'),
     }),
     new CheckDuplicatePlugin(),
     new UnusedFilesWebpackPlugin({ patterns: ['src/**/*.*'] })

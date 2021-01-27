@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { RouterProvider, useRoute } from 'react-router5';
-import { polyfills } from 'services';
+import { polyfills, sw } from 'services';
 
 import store from './store';
 import { router, PAGES } from './router';
@@ -12,6 +12,7 @@ import About from './pages/about';
 
 import './globalStyles';
 
+sw();
 polyfills();
 
 function App() {

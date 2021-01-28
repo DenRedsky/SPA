@@ -8,13 +8,16 @@ const MiniCss = require('mini-css-extract-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const { seo } = require('./package.json');
 
+const publicPath = process.env.PUBLIC_PATH || '';
+
 module.exports = {
   mode: 'production',
   entry: {
     app: path.resolve('src', 'index.jsx')
   },
   output: {
-    filename: 'js/[name].[contenthash].js'
+    filename: 'js/[name].[contenthash].js',
+    publicPath
   },
   resolve: {
     alias: {

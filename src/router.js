@@ -1,5 +1,6 @@
 import createRouter from 'router5';
 import browserPlugin from 'router5-plugin-browser';
+import { ROUTE_PATH } from 'constants';
 import store from './store';
 
 export const PAGES = {
@@ -7,11 +8,9 @@ export const PAGES = {
   ABOUT: 'about'
 };
 
-const path = '/webpack-react-redux-saga-router-stylus/';
-
 const routes = [
-  { name: PAGES.MAIN, path: `${ path }${ PAGES.MAIN }` },
-  { name: PAGES.ABOUT, path: `${ path }${ PAGES.ABOUT }` }
+  { name: PAGES.MAIN, path: `${ ROUTE_PATH }` },
+  { name: PAGES.ABOUT, path: `${ ROUTE_PATH }/${ PAGES.ABOUT }` }
 ];
 
 export const router = createRouter(routes, { defaultRoute: PAGES.MAIN });

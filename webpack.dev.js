@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const webpack = require('webpack');
 const { seo } = require('./package.json');
 
 const stats = {
@@ -104,6 +105,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.DefinePlugin({ ENV: JSON.stringify('dev') }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',

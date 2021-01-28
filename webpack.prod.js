@@ -6,9 +6,8 @@ const CheckDuplicatePlugin = require('duplicate-package-checker-webpack-plugin')
 const { UnusedFilesWebpackPlugin } = require('unused-files-webpack-plugin');
 const MiniCss = require('mini-css-extract-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
+const webpack = require('webpack');
 const { seo } = require('./package.json');
-
-const publicPath = process.env.PUBLIC_PATH || '';
 
 module.exports = {
   mode: 'production',
@@ -107,6 +106,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new webpack.DefinePlugin({ ENV: JSON.stringify('prod') }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve('src', 'template.hbs'),
@@ -128,7 +128,7 @@ module.exports = {
       }
     }),
     new WorkboxPlugin.InjectManifest({
-      swSrc: path.resolve('src', 'pwa', 'service-worker.js'),
+      swSrc: path.resolve('src', 'pwa', 'service-worker.js')
     }),
     new CheckDuplicatePlugin(),
     new UnusedFilesWebpackPlugin({ patterns: ['src/**/*.*'] })

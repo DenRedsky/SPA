@@ -1,9 +1,0 @@
-.DS_Store
-node_modules/
-dist/
-jest/coverage/
-.idea
-.vscode
-package-lock.json
-junit.xml
-.gitconfig

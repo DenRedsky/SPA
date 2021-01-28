@@ -22,6 +22,9 @@ module.exports = {
   entry: {
     app: path.resolve('src', 'index.jsx')
   },
+  output: {
+    publicPath: '/'
+  },
   resolve: {
     alias: {
       'services': path.resolve('src', 'services'),

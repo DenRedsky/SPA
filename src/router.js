@@ -7,9 +7,11 @@ export const PAGES = {
   ABOUT: 'about'
 };
 
+const path = '/webpack-react-redux-saga-router-stylus/';
+
 const routes = [
-  { name: PAGES.MAIN, path: '/main' },
-  { name: PAGES.ABOUT, path: '/about' }
+  { name: PAGES.MAIN, path: `${ path }${ PAGES.MAIN }` },
+  { name: PAGES.ABOUT, path: `${ path }${ PAGES.ABOUT }` }
 ];
 
 export const router = createRouter(routes, { defaultRoute: PAGES.MAIN });

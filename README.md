@@ -1,8 +1,44 @@
-# Webpack 4, react, redux, saga, router, stylus template
+# Progressive single page application
 
-Example of font loading:
+Template based on [react](https://github.com/facebook/react), [redux](https://github.com/reduxjs/redux), [redux-saga](https://github.com/redux-saga/redux-saga), [router5](https://github.com/router5/router5), [stylus](https://github.com/stylus/stylus), [webpack](https://github.com/webpack/webpack).
 
-**1) html**
+##Table of Contents
+
+1. [install](#install)
+2. [font loading](#font loading)
+
+<h2 align="center">Install</h2>
+
+Step 1. Clone via git CLI:
+
+```bash
+git clone https://github.com/DenRedsky/SPA.git
+```
+
+Step 2. Install with npm:
+
+```bash
+npm i
+```
+
+Step 3. Start development :rocket::
+
+```bash
+npm run start
+```
+
+### Other scripts
+
+| Command | Description |
+| :-----: | :---------: |
+|```npm run build```| production build |
+|```npm run analyze```| production bundle analyze |
+|```npm run server```| run server for local testing, need to build production static (```npm run build```) before start |
+|```npm run lint```| run lint of js, jsx, stylus files |
+
+<h2 align="center">Font loading</h2>
+
+Step 1.
 
 ```html
 <link

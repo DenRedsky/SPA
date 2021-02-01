@@ -5,7 +5,7 @@ Template based on [react](https://github.com/facebook/react), [redux](https://gi
 ##Table of Contents
 
 1. [install](#install)
-2. [font loading](#font loading)
+2. [font loading](#font)
 
 <h2 align="center">Install</h2>
 

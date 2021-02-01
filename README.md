@@ -5,7 +5,7 @@ Template based on [react](https://reactjs.org/), [redux](https://redux.js.org/),
 [stylus](https://stylus-lang.com/), [webpack](https://webpack.js.org/),
 [workbox](https://developers.google.com/web/tools/workbox), [handlebars](https://handlebarsjs.com/).
 
-Code quality [stylint](https://github.com/SimenB/stylint), **eslint**
+Code quality [stylint](https://github.com/SimenB/stylint), [eslint](https://eslint.org/)
 ([eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb),
 [eslint-plugin-sonarjs](https://github.com/SonarSource/eslint-plugin-sonarjs)),
 [duplicate-package-checker-webpack-plugin](https://github.com/darrenscerri/duplicate-package-checker-webpack-plugin),
@@ -16,6 +16,7 @@ Code quality [stylint](https://github.com/SimenB/stylint), **eslint**
 
 1. [install](#install)
 2. [font loading](#font-loading)
+3. [features](#features)
 
 <h2 align="center">Install</h2>
 
@@ -86,5 +87,13 @@ npm run start
 body
   font-family 'YourFontNameHere', sans-serif
 ```
+
+<h2 align="center">Features</h2>
+
+**Workbox.** Precache static bundled via webpack. API has cache with revalidation. Fallback as ```offline.html```.
+
+**Webpack.** Lazy loading of js, css, depending on routes and dynamic chunks.
+
+**Polyfills.** Used [smoothscroll-polyfill](https://github.com/iamdustan/smoothscroll), [intersection-observer](https://github.com/w3c/IntersectionObserver).
 
 ### for questions use telegram: @jquery_dlya_slabih

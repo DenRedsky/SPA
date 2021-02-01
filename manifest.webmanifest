@@ -4,11 +4,11 @@
   "display": "standalone",
   "theme_color": "#242629",
   "background_color": "#242629",
-  "start_url": "/",
+  "start_url": "/webpack-react-redux-saga-router-stylus",
   "orientation": "portrait",
   "icons": [
       {
-        "src": "maskable.png",
+        "src": "/webpack-react-redux-saga-router-stylus/maskable.png",
         "sizes": "1024x1024",
         "type": "image/png",
         "purpose": "any maskable"

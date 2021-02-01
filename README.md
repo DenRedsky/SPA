@@ -1,6 +1,16 @@
 # Progressive single page application
 
-Template based on [react](https://github.com/facebook/react), [redux](https://github.com/reduxjs/redux), [redux-saga](https://github.com/redux-saga/redux-saga), [router5](https://github.com/router5/router5), [stylus](https://github.com/stylus/stylus), [webpack](https://github.com/webpack/webpack).
+Template based on [react](https://reactjs.org/), [redux](https://redux.js.org/),
+[redux-saga](https://redux-saga.js.org/), [router5](https://router5.js.org/),
+[stylus](https://stylus-lang.com/), [webpack](https://webpack.js.org/),
+[workbox](https://developers.google.com/web/tools/workbox), [handlebars](https://handlebarsjs.com/).
+
+Code quality [stylint](https://github.com/SimenB/stylint), **eslint**
+([eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb),
+[eslint-plugin-sonarjs](https://github.com/SonarSource/eslint-plugin-sonarjs)),
+[duplicate-package-checker-webpack-plugin](https://github.com/darrenscerri/duplicate-package-checker-webpack-plugin),
+[unused-files-webpack-plugin](https://github.com/tomchentw/unused-files-webpack-plugin),
+[webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer).
 
 ## Table of Contents
 

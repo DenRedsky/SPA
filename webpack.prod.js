@@ -7,6 +7,7 @@ const { UnusedFilesWebpackPlugin } = require('unused-files-webpack-plugin');
 const MiniCss = require('mini-css-extract-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const webpack = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
 const { seo } = require('./package.json');
 
 module.exports = {
@@ -129,6 +130,12 @@ module.exports = {
     }),
     new WorkboxPlugin.InjectManifest({
       swSrc: path.resolve('src', 'pwa', 'service-worker.js')
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: path.resolve('src', 'pwa', 'manifest.webmanifest') },
+        { from: path.resolve('src', 'pwa', 'icons') }
+      ]
     }),
     new CheckDuplicatePlugin(),
     new UnusedFilesWebpackPlugin({ patterns: ['src/**/*.*'] })

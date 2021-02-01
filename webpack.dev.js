@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
 const { seo } = require('./package.json');
 
 const stats = {
@@ -112,6 +113,12 @@ module.exports = {
       template: path.resolve('src', 'template.hbs'),
       scriptLoading: 'defer',
       seo
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: path.resolve('src', 'pwa', 'manifest.webmanifest') },
+        { from: path.resolve('src', 'pwa', 'icons') }
+      ]
     })
   ]
 };

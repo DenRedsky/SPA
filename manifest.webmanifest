@@ -4,7 +4,7 @@
   "display": "standalone",
   "theme_color": "#242629",
   "background_color": "#242629",
-  "start_url": "/",
+  "start_url": "/webpack-react-redux-saga-router-stylus/",
   "orientation": "portrait",
   "icons": [
       {

@@ -92,7 +92,7 @@ body
 
 **Workbox.** Precache static bundled via webpack. API has cache with revalidation. Fallback as ```offline.html```.
 
-**Webpack.** Lazy loading of js, css, depending on routes and dynamic chunks.
+**Webpack.** Lazy loading of js and css, depending on routes and dynamic chunks.
 
 **Polyfills.** Used [smoothscroll-polyfill](https://github.com/iamdustan/smoothscroll), [intersection-observer](https://github.com/w3c/IntersectionObserver).
 

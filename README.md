@@ -2,26 +2,26 @@
 
 Template based on [react](https://github.com/facebook/react), [redux](https://github.com/reduxjs/redux), [redux-saga](https://github.com/redux-saga/redux-saga), [router5](https://github.com/router5/router5), [stylus](https://github.com/stylus/stylus), [webpack](https://github.com/webpack/webpack).
 
-##Table of Contents
+## Table of Contents
 
 1. [install](#install)
-2. [font loading](#font)
+2. [font loading](#font-loading)
 
 <h2 align="center">Install</h2>
 
-Step 1. Clone via git CLI:
+**Step 1.** Clone via git CLI:
 
 ```bash
 git clone https://github.com/DenRedsky/SPA.git
 ```
 
-Step 2. Install with npm:
+**Step 2.** Install with npm:
 
 ```bash
 npm i
 ```
 
-Step 3. Start development :rocket::
+**Step 3.** Start development :rocket::
 
 ```bash
 npm run start
@@ -38,7 +38,7 @@ npm run start
 
 <h2 align="center">Font loading</h2>
 
-Step 1.
+**Step 1.** Add link tags to html:
 
 ```html
 <link
@@ -56,7 +56,8 @@ Step 1.
     crossorigin
 >
 ```
-**2) stylus**
+
+**Step 2.** Add ```@font-face``` to **globalStyles.styl** and set ```font-family```:
 ```stylus
 @font-face
   font-family 'YourFontNameHere'

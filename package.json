@@ -97,6 +97,7 @@
     "analyze": "BABEL_ENV=production webpack --env=analyze",
     "lint:style": "stylint src/",
     "lint:js": "eslint --ext .js,.jsx src/",
-    "lint": "run-p lint:*"
+    "lint": "run-p lint:*",
+    "test": "./node_modules/.bin/wdio wdio.conf.js"
   }
 }

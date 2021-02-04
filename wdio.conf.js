@@ -1,11 +1,12 @@
 exports.config = {
-  specs: [
-    './test/specs/**/*.js'
-  ],
+  specs: ['./test/specs/**/*.js'],
   capabilities: [
-    { browserName: 'chrome' },
-    { browserName: 'firefox' },
-    { browserName: 'safari' }
+    {
+      browserName: 'chrome',
+      'goog:chromeOptions': {
+        // args: ['--headless', '--disable-gpu']
+      }
+    }
   ],
   logLevel: 'error',
   baseUrl: 'http://localhost',

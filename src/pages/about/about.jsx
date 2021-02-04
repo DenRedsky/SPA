@@ -18,8 +18,11 @@ const About = () => {
         Go to main
       </LinkButton>
 
-      <div onClick={ () => setCount(count + 1) }>
-        Click me! { count }
+      <button type="button" onClick={ () => setCount(count + 1) }>
+        Click me!
+      </button>
+      <div id="counter">
+        { count }
       </div>
       <div>
         { TEST_CONST }

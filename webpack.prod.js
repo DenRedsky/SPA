@@ -17,7 +17,7 @@ module.exports = {
   },
   output: {
     filename: 'js/[name].[contenthash].js',
-    publicPath: 'https://denredsky.github.io/webpack-react-redux-saga-router-stylus/'
+    publicPath: 'https://denredsky.github.io/SPA/'
   },
   resolve: {
     alias: {

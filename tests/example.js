@@ -1,6 +1,6 @@
 describe('Check page', () => {
   it('should have the right title', () => {
-    browser.url('http://localhost:3000/webpack-react-redux-saga-router-stylus');
+    browser.url('http://localhost:3000/SPA');
     expect(browser)
       .toHaveTitle('This is title');
   });

@@ -1,15 +1,17 @@
 exports.config = {
-  specs: ['./test/specs/**/*.js'],
+  specs: ['./tests/*.js'],
   capabilities: [
     {
       browserName: 'chrome',
       'goog:chromeOptions': {
-        // args: ['--headless', '--disable-gpu']
+        args: ['--headless', '--disable-gpu']
       }
     }
   ],
+  mochaOpts: {
+    checkLeaks: true
+  },
   logLevel: 'error',
-  baseUrl: 'http://localhost',
   reporters: ['spec'],
   services: ['selenium-standalone']
 };

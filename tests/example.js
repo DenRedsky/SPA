@@ -10,6 +10,9 @@ describe('Check page', () => {
 
     link.click();
     expect(browser).toHaveUrlContaining('/about');
+
+    const header = $('h1=About us');
+    expect(header).toBeExisting();
   });
 
   it('click on "Click me!" work', () => {

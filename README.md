@@ -5,12 +5,14 @@ Template based on [react](https://reactjs.org/), [redux](https://redux.js.org/),
 [stylus](https://stylus-lang.com/), [webpack](https://webpack.js.org/),
 [workbox](https://developers.google.com/web/tools/workbox), [handlebars](https://handlebarsjs.com/).
 
-Code quality [stylint](https://github.com/SimenB/stylint), [eslint](https://eslint.org/)
+Code quality: [stylint](https://github.com/SimenB/stylint), [eslint](https://eslint.org/)
 ([eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb),
 [eslint-plugin-sonarjs](https://github.com/SonarSource/eslint-plugin-sonarjs)),
 [duplicate-package-checker-webpack-plugin](https://github.com/darrenscerri/duplicate-package-checker-webpack-plugin),
 [unused-files-webpack-plugin](https://github.com/tomchentw/unused-files-webpack-plugin),
 [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer).
+
+Tests: [webdriverio](https://webdriver.io/).
 
 ## Table of Contents
 
@@ -46,6 +48,7 @@ npm run start
 |```npm run analyze```| production bundle analyze |
 |```npm run server```| run server for local testing, need to build production static (```npm run build```) before start |
 |```npm run lint```| run lint of js, jsx, stylus files |
+|```npm run test```| run tests |
 
 <h2 align="center">Font loading</h2>
 

@@ -25,7 +25,8 @@ module.exports = {
       'styles': path.resolve('src', 'constants.styl'),
       'constants': path.resolve('src', 'constants.js'),
       'api': path.resolve('src', 'api.js'),
-      'router': path.resolve('src', 'router.js')
+      'router': path.resolve('src', 'router.js'),
+      'shared': path.resolve('src', 'shared')
     },
     modules: ['node_modules'],
     extensions: ['.jsx', '.js', '.styl']
@@ -138,6 +139,11 @@ module.exports = {
       ]
     }),
     new CheckDuplicatePlugin(),
-    new UnusedFilesWebpackPlugin({ patterns: ['src/**/*.*'] })
+    new UnusedFilesWebpackPlugin({
+      patterns: ['src/**/*.*'],
+      globOptions: {
+        ignore: ['node_modules/**/*', '**/*.test.*']
+      }
+    })
   ]
 };

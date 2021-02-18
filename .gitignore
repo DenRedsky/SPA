@@ -7,3 +7,4 @@ jest/coverage/
 package-lock.json
 junit.xml
 .gitconfig
+coverage/

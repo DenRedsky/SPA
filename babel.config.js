@@ -14,7 +14,8 @@ module.exports = {
   env: {
     production: {
       plugins: [
-        ['transform-react-remove-prop-types', { removeImport: true }]
+        ['transform-react-remove-prop-types', { removeImport: true }],
+        ['react-remove-properties', { properties: ['data-testid'] }]
       ]
     }
   }

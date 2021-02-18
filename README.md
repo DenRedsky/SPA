@@ -48,7 +48,8 @@ npm run start
 |```npm run analyze```| production bundle analyze |
 |```npm run server```| run server for local testing, need to build production static (```npm run build```) before start |
 |```npm run lint```| run lint of js, jsx, stylus files |
-|```npm run test```| run tests |
+|```npm run test:unit```| run unit tests |
+|```npm run test:e2e```| run e2e tests on http://localhost:3000 |
 
 <h2 align="center">Font loading</h2>
 

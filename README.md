@@ -12,7 +12,7 @@ Code quality: [stylint](https://github.com/SimenB/stylint), [eslint](https://esl
 [unused-files-webpack-plugin](https://github.com/tomchentw/unused-files-webpack-plugin),
 [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer).
 
-Tests: [webdriverio](https://webdriver.io/).
+Tests: [webdriverio](https://webdriver.io/) + [mocha](https://mochajs.org/), [jest](https://jestjs.io/) + [testing library](https://testing-library.com/).
 
 ## Table of Contents
 

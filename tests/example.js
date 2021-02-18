@@ -17,7 +17,7 @@ describe('Check page', () => {
 
   it('click on "Click me!" work', () => {
     const button = $('button=Click me!');
-    const counter = $('#counter');
+    const counter = $('[data-testid=count]');
 
     expect(counter).toHaveText('0');
     button.click();
